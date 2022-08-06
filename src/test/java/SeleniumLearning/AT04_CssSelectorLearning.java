@@ -9,10 +9,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
-public class AT02_LocatorsLearning {
+public class AT04_CssSelectorLearning {
 
     @Test
-    public void locLearn(){
+    public void css(){
+
         //Setting up chromedriver.
         WebDriverManager.chromedriver().setup();
         //options
@@ -26,12 +27,7 @@ public class AT02_LocatorsLearning {
         driver.get("https://www.thegoodguys.com.au/UserRegistrationForm?myAcctMain=1&new=Y&catalogId=30000&langId=-1&storeId=900");
         //implicit wait
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //by id
-        driver.findElement(By.id("regAddForm_firstName")).sendKeys("FirstName");
-        //by name
-        driver.findElement(By.name("lastName")).sendKeys("LastName");
-        //by linktext
-        driver.findElement(By.linkText("1 Hr Click & Collect")).click();
-
-            }
+        // Verison-1 -- css --starts with
+        driver.findElement(By.cssSelector("input[name^='f']")).sendKeys("test");
+    }
 }
