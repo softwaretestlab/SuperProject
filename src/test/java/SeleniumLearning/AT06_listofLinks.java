@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class AT05_listofLinks {
+public class AT06_listofLinks {
     @Test
     public void Linkslist() throws IOException, InterruptedException {
         //Setting up chromedriver.
